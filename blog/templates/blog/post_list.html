@@ -3,7 +3,11 @@
         <title>Zeynep'in blogu</title>
     </head>
     <body>
-        <p>Merhaba!</p>
-        <p>Çalışıyor!</p>
-    </body>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.yayinlanma_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}    </body>
 </html>
